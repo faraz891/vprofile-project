@@ -9,7 +9,7 @@ pipeline {
     environment {
         NEXUS_VERSION = "nexus3"
         NEXUS_PROTOCOL = "http"
-        NEXUS_URL = "172.31.15.86:8081"
+        NEXUS_URL = "http://35.160.171.50:8081"
         NEXUS_REPOSITORY = "vprofile-release"
 	    NEXUS_REPOGRP_ID = "vprofile-grp-repo"
         NEXUS_CREDENTIAL_ID = "nexuslogin"
@@ -56,7 +56,7 @@ pipeline {
         stage('CODE ANALYSIS with SONARQUBE') {
           
 		  environment {
-             scannerHome = tool 'sonarscanner4'
+             scannerHome = tool 'SonarCloud'
           }
 
           steps {
